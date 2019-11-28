@@ -1,0 +1,9 @@
+<?php
+
+public static $keysecure = "DJNDSNFSNDSO9287466634()23";
+
+$key = $GET['apikey'];
+$conexion = mysql_connect("localhost", "telemetria", "123456");
+mysql_select_db("telemetria",$conexion);
+mysql_query("INSERT INTO 'asistencia'('cardId') VALUES ('". $_GET['cardId'] . "')", $conexion);
+?>
